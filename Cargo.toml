@@ -1,0 +1,18 @@
+[package]
+name = "redis_dumbpool"
+version = "0.1.0"
+authors = ["Marco Napetti <marco.napetti@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["rt", "time"] }
+futures-util = "0.3"
+async-lock = "2.3"
+redis = { version = "0.20", features = ["tokio-comp"] }
+log = "0.4"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt", "rt-multi-thread", "time"] }
+env_logger = "0.8.3"
