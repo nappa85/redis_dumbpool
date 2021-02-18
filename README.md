@@ -10,4 +10,4 @@ There is a main object (Pool), storing a Vec of Redis connections.
 The Pool can be inited with a number of active connections.
 Every time a connection is requested from the pool, it's popped from the Vec and tested before being returned.
 If a connection isn't available and the maximum number of connections has been already reached, an async sleep is performed before retrying.
-On return, the connection is wrapper in a struct that only purpose is to return the connection to the pool on drop.
+On return, the connection is wrapped in a struct that only purpose is to return the connection to the pool on drop.
