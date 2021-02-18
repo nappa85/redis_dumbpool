@@ -47,7 +47,7 @@ impl Pool {
                 client,
                 max,
                 sleep,
-                count: min,
+                count: min.min(max),
                 pool,
             }))
         })
