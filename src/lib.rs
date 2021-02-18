@@ -37,7 +37,7 @@ impl Pool {
     /// Create a new Pool, pointing to a single Redis server, with minimum and maximum number of active connections and the amount of millisecond to wait between a retries when the connection pool at maximum capacity
     pub async fn factory(addr: &str, min: u8, max: u8, sleep: u64) -> RedisResult<Self> {
         let client = Client::open(addr)?;
-        let pool = iter(0..min)
+        let pool = iter(0..min.min(max))
             .then(|_| async { client.get_async_connection().await })
             .try_collect()
             .await?;
