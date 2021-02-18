@@ -3,6 +3,11 @@ name = "redis_dumbpool"
 version = "0.1.0"
 authors = ["Marco Napetti <marco.napetti@gmail.com>"]
 edition = "2018"
+description = "Really dumb implementation of a Redis Connection Pool"
+license = "Apache-2.0/MIT"
+repository = "https://github.com/nappa85/redis_dumbpool"
+readme = "README.md"
+keywords = ["async", "redis", "pool"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
