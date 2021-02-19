@@ -1,6 +1,6 @@
 [package]
 name = "redis_dumbpool"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Marco Napetti <marco.napetti@gmail.com>"]
 edition = "2018"
 description = "Really dumb implementation of a Redis Connection Pool"
@@ -21,3 +21,4 @@ log = "0.4"
 [dev-dependencies]
 tokio = { version = "1", features = ["macros", "rt", "rt-multi-thread", "time"] }
 env_logger = "0.8.3"
+rand = "0.8"
