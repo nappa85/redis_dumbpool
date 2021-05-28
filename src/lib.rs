@@ -11,9 +11,7 @@ use std::time::Duration;
 
 use redis::{Client, cmd, aio::Connection, RedisResult};
 
-use async_lock::Mutex;
-
-use tokio::time::{sleep, interval_at, Instant};
+use tokio::{time::{sleep, interval_at, Instant}, sync::Mutex};
 
 use futures_util::stream::{iter, StreamExt, TryStreamExt};
 
